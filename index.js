@@ -207,7 +207,7 @@ const [first, ...rest] = cities;
 
 console.log("First=>", first);
 console.log("Rest =>", rest);
-*/
+
 
 const user = {
     name : "Sumit",
@@ -219,3 +219,23 @@ const user = {
 const {password, ...rest } = user;
 
 console.log(rest);
+*/
+
+/****** Function and prototype *******/
+
+function Holiday(destination, days) {
+    this.destination = destination;
+    this.days = days;
+}
+
+Holiday.prototype.info = function () {
+    console.log(`${this.destination} | ${this.days}`)
+}
+
+const nepal = new Holiday("Nepal", 30);
+
+const australia = new Holiday("australia", 15);
+
+console.log(nepal);
+
+console.log(australia);
