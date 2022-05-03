@@ -180,7 +180,18 @@ uniStudents({
 */
 
 /*** Destructuring array ***/
-
+/*
 const [,secondOne] = ["one", "two", "three"];
 
-console.log(firstOne);
+console.log(firstOne); */
+
+/***** Spreed Operator (...) *****/
+
+const madhayaPradheshCities = ["Jabalpur","Bhopal","Indore"];
+const KarnatakaCities = ["Bangalore","Mysure","KGF"];
+
+const allCities = [...madhayaPradheshCities, ...KarnatakaCities];
+
+console.log(allCities);
+
+console.log(allCities.join(", "));
