@@ -86,6 +86,7 @@ alert(result);
 
 /****** Functions  ********/
 
+/*
 function welcome(
     user = "Default User" ,
     message = "Default message, ...."
@@ -96,3 +97,35 @@ function welcome(
 
 welcome(); //will take default value
 
+
+function greeting(message) {
+    alert(`${message} everyone`);
+}
+
+greeting("Hello");
+*/
+/*** Arrow Function ****/
+
+//one line function declaration
+// if only one argument, no need ()
+// () is needed for multiple arguments or no arguments
+// no need to write return keyword for enturing one statement
+// return keyword is needed for multiple statements
+
+/*
+let greeting = (message) => alert(`${message} everyone`);
+
+greeting("Hello");
+*/
+
+let createBlog = (title, body) => {
+    if(!title) {
+        throw new Error("A title is needed");
+    }
+    if(!body) {
+        throw new Error("Body can't be empty");
+    }
+    return `${title} - ${body}`;
+};
+
+alert(createBlog("A new blog", "Some Text in my Blog"));
