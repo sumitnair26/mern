@@ -167,6 +167,7 @@ console.log(night);
 //destruturing function arguments
 // passing an object as function arguments
 
+/*
 const uniStudents = ({ fname, lname }) => {
     //let { fname, lname } = student;
     console.log(`${fname} ${lname} is from university of RGPV`);
@@ -176,3 +177,10 @@ uniStudents({
     fname:"Sumit",
     lname:"Nair"
 })
+*/
+
+/*** Destructuring array ***/
+
+const [,secondOne] = ["one", "two", "three"];
+
+console.log(firstOne);
