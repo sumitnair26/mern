@@ -223,6 +223,7 @@ console.log(rest);
 
 /****** Function and prototype *******/
 
+/*
 function Holiday(destination, days) {
     this.destination = destination;
     this.days = days;
@@ -239,3 +240,60 @@ const australia = new Holiday("australia", 15);
 console.log(nepal);
 
 console.log(australia);
+*/
+
+/*** Classes ***/
+/** New Javascript */
+
+/*
+class Holiday {
+    //constructor functon automatically runs each time
+    // a new instance of holidat is creates usinf new keyword
+    constructor(destination, days) {
+        this.destination = destination;
+        this.days = days;
+    }
+    info() {
+        console.log(`${this.destination} will take ${this.days} days.`);
+    }
+}
+
+const trip = new Holiday("Manali, Himachal", 15);
+
+console.log(trip.info());
+console.log(Holiday.prototype);
+
+const trip2 = new Holiday("Kochi, Kerala", 15);
+console.log(trip2.info());
+*/
+class Holiday {
+    //constructor functon automatically runs each time
+    // a new instance of holidat is creates usinf new keyword
+    constructor(destination, days) {
+        this.destination = destination;
+        this.days = days;
+    }
+    info() {
+        console.log(`${this.destination} will take ${this.days} days.`);
+    }
+}
+
+class Expedition extends Holiday {
+    //gear is added
+    constructor(destination, days, gear) {
+        //call the super class constructor and pass the name parameter
+        super(destination, days);
+        this.gear = gear;
+    }
+    info() {
+        super.info();
+        const[camera, ...rest] = this.gear;
+        console.log(`Bring ${rest} and ${camera}`);
+    }
+}
+
+const travel = new Expedition(
+    "Everest","30", ["Sunglasses","Camera","Beer","Some more items"
+]);
+
+travel.info();
