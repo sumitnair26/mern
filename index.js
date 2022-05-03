@@ -187,6 +187,7 @@ console.log(firstOne); */
 
 /***** Spreed Operator (...) *****/
 
+/*
 const madhayaPradheshCities = ["Jabalpur","Bhopal","Indore"];
 const KarnatakaCities = ["Bangalore","Mysure","KGF"];
 
@@ -195,3 +196,26 @@ const allCities = [...madhayaPradheshCities, ...KarnatakaCities];
 console.log(allCities);
 
 console.log(allCities.join(", "));
+*/
+
+/****  Rest Operator  ****/
+
+/*
+const cities = ["Jabalpur","Bhopal","Indore"];
+cities.push('Sagar');
+const [first, ...rest] = cities;
+
+console.log("First=>", first);
+console.log("Rest =>", rest);
+*/
+
+const user = {
+    name : "Sumit",
+    email:"sumit.nair@x.com",
+    password : "Will not send"
+}
+
+
+const {password, ...rest } = user;
+
+console.log(rest);
