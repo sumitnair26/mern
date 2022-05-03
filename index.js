@@ -118,6 +118,7 @@ let greeting = (message) => alert(`${message} everyone`);
 greeting("Hello");
 */
 
+/*
 let createBlog = (title, body) => {
     if(!title) {
         throw new Error("A title is needed");
@@ -129,3 +130,21 @@ let createBlog = (title, body) => {
 };
 
 alert(createBlog("A new blog", "Some Text in my Blog"));
+*/
+
+/**** This ******/
+
+/* We should not use this with arrow function
+ As it will not work
+*/
+/*
+let india = {
+    cities: ["Jabalpur","Bhopal","Indore"],
+    printWithDash: function () {
+        alert(this.cities.join(" - "));
+    }
+}
+
+india.printWithDash();
+*/
+
